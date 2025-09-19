@@ -1,0 +1,9 @@
+img {
+    width: 300px;
+    border: 2px solid black;
+}
+p{
+    color: blueviolet;
+    font-size: 2em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serifs;
+}
