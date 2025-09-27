@@ -1,0 +1,24 @@
+#ejercicio1_Crear una nueva tabla para almacenar info de los productos.
+- _Requerimientos:_
+CREATE TABLE Products (
+    products_id INT PRIMARY KEY,
+    products_name VARCHAR(150),
+    price decimal(10,2),
+    stock int
+);
+
+#ejercicio2_ñadir productos a nuestra nueva tabla!
+- _Requerimientos:_
+INSERT INTO products (products_id,   products_name,  price, stock) VALUES
+(1, 'Laptop Pro', 1200.00, 50),
+(2, 'Mouse Gamer', 75.50, 150),
+(3, 'Teclado Mecánico', 150.99, 100);
+
+#ejercicio3_ Obtener una lista de clientes mostrando solo nombre, apellido y email.
+- _Requerimientos:_
+SELECT first_name, last_name, email FROM Customers;
+
+#ejercicio4_ Mostrar toda la info de los clientes de México.
+- _Requerimientos:_
+SELECT * FROM Customers WHERE country = 'mexico';
+

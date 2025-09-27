@@ -1,0 +1,7 @@
+let nombre = "Roxibel castillo";
+let añodenacimiento = 2008;
+let añoactual = 2025;
+
+let edad = añodenacimiento - añoactual;
+
+console.log(`hola, mi nombre es ${nombre} y tengo ${edad}años`)
