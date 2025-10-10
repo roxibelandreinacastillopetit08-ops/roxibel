@@ -1,215 +1,241 @@
-#php
-  
-#ejercicio1
 
-<?php
-    echo "Hola, Mundo desde PHP!";
-?>
+# html y css
+
+#ejercicio 1
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hola</title>
+</head>
+<body>
+    <h1>¡Hola, Mundo!</h1>
+    <p>Mi primera página web.</p>
+</body>
+</html>
+
+
 
 #ejercicio2
 
-<?php
-    $nombre = "Juan";
-    $edad = 30;
-    echo "Hola, mi nombre es " . $nombre . " y tengo " . $edad . " años.";
-?>
-
+<article>
+    <header>
+        <h2>Título</h2>
+    </header>
+    <p>Contenido del artículo.</p>
+    <footer>
+        <p>Fin del artículo.</p>
+    </footer>
+</article>
 
 #ejercicio3
 
-<?php
-    $num1 = 10;
-    $num2 = 5;
 
-    echo "Suma: " . ($num1 + $num2) . "<br>";
-    echo "Resta: " . ($num1 - $num2) . "<br>";
-    echo "Multiplicación: " . ($num1 * $num2) . "<br>";
-    echo "División: " . ($num1 / $num2) . "<br>";
-?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estilos</title>
+    <link rel="stylesheet" href="estilos3.css">
+</head>
+<body>
+    <h1>Color y Fuente</h1>
+</body>
+</html>
+
+
+#css
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color: blue;
+}
 
 
 #ejercicio4
 
-<?php
-    $nombre = $_GET['nombre'] ?? 'Invitado';
-    echo "¡Hola, " . $nombre . "!";
-?>
+<nav>
+    <ul class="menu-flex">
+        <li><a href="#">Uno</a></li>
+        <li><a href="#">Dos</a></li>
+        <li><a href="#">Tres</a></li>
+    </ul>
+</nav>
+
+#css
+
+.menu-flex {
+    list-style: none;
+    padding: 0;
+    /* Flexbox para horizontal */
+    display: flex;
+    gap: 15px;
+}
+
 
 
 #ejercicio5
 
-<?php
-    $paises = ["Chile", "Perú", "Argentina", "Colombia"];
+<table>
+    <thead>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+    </tbody>
+</table>
 
-    foreach ($paises as $pais) {
-        echo $pais ;
-    }
-?>
+#css
+
+table {
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+
 
 
 #ejercicio6
 
-<?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $nombre = $_POST['nombre'] ?? '';
-        $email = $_POST['email'] ?? '';
+<form action="procesar.php" method="POST">
+    <label for="n">Nombre:</label>
+    <input type="text" id="n" name="nombre" required>
 
-        if (!empty($nombre) && !empty($email)) {
-            echo "Gracias " . $nombre . ", hemos recibido tu mensaje.";
-        } else {
-            echo "Error: Debes completar todos los campos.";
-        }
-    }
-?>
+    <label for="e">Email:</label>
+    <input type="email" id="e" name="email" required>
+
+    <label for="m">Mensaje:</label>
+    <textarea id="m" name="mensaje"></textarea>
+
+    <button type="submit">Enviar</button>
+</form>
+
+
 
 #ejercicio7
+form {
+    padding: 20px;
+}
 
-<?php
-    $edad = $_GET['edad'] ?? 0;
-    $edad = (int)$edad;
+input, textarea, button {
+    margin-bottom: 10px;
+    display: block; /* Para que ocupen su propia línea */
+}
 
-    if ($edad < 18) {
-        echo "Menor de edad.";
-    } elseif ($edad >= 18 && $edad < 65) {
-        echo "Adulto.";
-    } else {
-        echo "Adulto mayor.";
-    }
-?>
+button[type="submit"] {
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+
+
+#css
+
+form {
+    padding: 20px;
+}
+
+input, textarea, button {
+    margin-bottom: 10px;
+    display: block; /* Para que ocupen su propia línea */
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+}
 
 
 #ejercicio8
 
-<?php
-    $numero = $_GET['num'] ?? 5;
-    $numero = (int)$numero;
 
-    echo "<h3>Tabla del " . $numero . "</h3>";
-    echo "<table border='1'>";
+<div class="tarjeta">
+    <img src="imagen.jpg" alt="Producto">
+    <div class="info">
+        <h3>Título</h3>
+        <p>Descripción</p>
+        <span>$10</span>
+    </div>
+</div>
 
-    for ($i = 1; $i <= 10; $i++) {
-        $resultado = $numero * $i;
-        echo "<tr><td>" . $numero . " x " . $i . "</td><td>" . $resultado . "</td></tr>";
-    }
-
-    echo "</table>";
-?>
+#css
+.tarjeta {
+    /* Flexbox */
+    display: flex;
+    align-items: center; /* Alinear verticalmente */
+    gap: 10px;
+    border: 1px solid gray;
+    padding: 10px;
+}
+.tarjeta img {
+    width: 50px;
+    height: 50px;
+}
 
 
 #ejercicio9
+<div class="contenedor-grid">
+    <header>Header</header>
+    <aside>Sidebar</aside>
+    <main>Contenido</main>
+    <footer>Footer</footer>
+</div>
+  
+  
+  #css
+  
+.contenedor-grid {
+    /* Grid */
+    display: grid;
+    /* Estructura Header/Sidebar-Main/Footer */
+    grid-template-columns: 1fr 3fr; /* Sidebar y Main */
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "h h"
+        "s m"
+        "f f";
+    height: 100vh;
+}
 
-<?php
-    function calcularPromedio($numeros) {
-        if (empty($numeros)) {
-            return 0;
-        }
-        $suma = array_sum($numeros);
-        $conteo = count($numeros);
-        return $suma / $conteo;
-    }
+header { grid-area: h; }
+aside { grid-area: s; }
+main { grid-area: m; }
+footer { grid-area: f; }
 
-    $notas = [8, 9, 7, 10];
-    $promedio = calcularPromedio($notas);
-
-    echo "El promedio es: " . $promedio;
-?>
 
 
 #ejercicio10
 
-<?php
-    require 'header.php';
-?>
-<main>
-    <p>Este es el contenido principal de la página.</p>
-</main>
-<?php
-    require 'footer.php';
-?>
-
-#ejercicio11
-
-<?php
-    session_start();
-
-    if (!isset($_SESSION['contador'])) {
-        $_SESSION['contador'] = 1;
-    } else {
-        $_SESSION['contador']++;
+#css
+/* REQUERIMIENTO: Media Query para apilar columnas */
+@media (max-width: 600px) {
+    .contenedor-grid {
+        /* Una sola columna */
+        grid-template-columns: 1fr;
+        /* Reordenar las áreas apiladas */
+        grid-template-areas:
+            "h"
+            "s"
+            "m"
+            "f";
     }
-
-    echo "Has visitado esta página " . $_SESSION['contador'] . " veces.";
-?>
-
-
-#ejercicio12
-
-<?php
-    class Usuario {
-        public $nombre;
-        public $email;
-
-        public function __construct($nombre, $email) {
-            $this->nombre = $nombre;
-            $this->email = $email;
-        }
-
-        public function saludar() {
-            return "Hola, soy " . $this->nombre . " y mi email es " . $this->email . ".";
-        }
-    }
-
-    $usuario1 = new Usuario("Ana", "ana@gmail.com");
-    echo $usuario1->saludar();
-?>
-
-#ejercicio13
-
-<?php
-    session_start();
-    $usuario_valido = 'admin';
-    $password_valido = '1234';
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $usuario = $_POST['usuario'] ?? '';
-        $password = $_POST['password'] ?? '';
-
-        if ($usuario === $usuario_valido && $password === $password_valido) {
-            $_SESSION['logeado'] = true;
-            $_SESSION['usuario'] = $usuario;
-            header("Location: privada.php");
-            exit;
-        }
-    }
-?>
+}
 
 
 
-#ejercicio14
-
-<?php
-    $archivo = 'datos.txt';
-
-    if (file_exists($archivo)) {
-        $contenido = file_get_contents($archivo);
-        echo nl2br(htmlspecialchars($contenido));
-    } else {
-        echo "Error: El archivo no existe.";
-    }
-?>
-
-
-#ejercicio15
-
-<?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $nombre = $_POST['nombre'] ?? 'Desconocido';
-        $mensaje = $_POST['mensaje'] ?? 'Sin mensaje';
-        $timestamp = date("Y-m-d H:i:s");
-
-        $linea_log = "[" . $timestamp . "] Nombre: " . $nombre . ", Mensaje: " . $mensaje . "\n";
-
-        file_put_contents('log.txt', $linea_log, FILE_APPEND | LOCK_EX);
-        echo "Datos guardados en log.txt";
-    }
-?>
