@@ -1,0 +1,297 @@
+#c++
+
+
+#ejercicio1
+
+#include <iostream>
+
+int main() {
+    std::cout << "Hola Mundo !" << std::endl;
+    return 0;
+}
+
+
+#ejercicio2
+
+#include <iostream>
+
+int main() {
+    int a, b;
+    std::cout << "Introduce el primer numero: ";
+    std::cin >> a;
+    std::cout << "Introduce el segundo numero: ";
+    std::cin >> b;
+    int suma = a + b;
+    std::cout << "La suma es: " << suma << std::endl;
+    return 0;
+}
+
+#ejercicio3
+#include <iostream>
+
+int main() {
+    int entero = 10;
+    float flotante = 3.14f;
+    double doble = 1.23456;
+    char caracter = 'A';
+    bool booleano = true;
+
+    std::cout << "Int: " << entero << std::endl;
+    std::cout << "Float: " << flotante << std::endl;
+    std::cout << "Double: " << doble << std::endl;
+    std::cout << "Char: " << caracter << std::endl;
+    std::cout << "Bool: " << booleano << std::endl;
+    return 0;
+}
+
+
+
+
+#ejercicio4
+
+#include <iostream>
+
+int main() {
+    const double PI = 3.14159;
+    double radio;
+    std::cout << "Introduce el radio del circulo: ";
+    std::cin >> radio;
+    double area = PI * radio * radio;
+    std::cout << "El area es: " << area << std::endl;
+    return 0;
+}
+
+#ejercicio5
+
+#include <iostream>
+
+int main() {
+    int x = 15;
+    int y = 20;
+
+    std::cout << "x es mayor que y: " << (x > y) << std::endl;
+    std::cout << "x es menor que y: " << (x < y) << std::endl;
+    std::cout << "x es igual a y: " << (x == y) << std::endl;
+    return 0;
+}
+
+#ejercicio6
+
+#include <iostream>
+
+int main() {
+    int numero;
+    std::cout << "Introduce un numero entero: ";
+    std::cin >> numero;
+
+    if (numero % 2 == 0) {
+        std::cout << "El numero es par." << std::endl;
+    } else {
+        std::cout << "El numero es impar." << std::endl;
+    }
+    return 0;
+}
+
+
+
+#ejercicio7
+
+#include <iostream>
+
+int main() {
+    int numero;
+    std::cout << "Introduce un numero para la tabla: ";
+    std::cin >> numero;
+
+    for (int i = 1; i <= 10; ++i) {
+        std::cout << numero << " x " << i << " = " << (numero * i) << std::endl;
+    }
+    return 0;
+}
+
+#ejercicio8
+
+#include <iostream>
+
+int main() {
+    int numeros[] = {10, 20, 30, 40, 50};
+    int n = sizeof(numeros) / sizeof(numeros[0]);
+    int suma = 0;
+
+    for (int i = 0; i < n; ++i) {
+        suma += numeros[i];
+    }
+
+    std::cout << "La suma de los elementos es: " << suma << std::endl;
+    return 0;
+}
+
+#ejercicio9
+
+#include <iostream>
+
+long long factorial(int n) {
+    long long res = 1;
+    for (int i = 2; i <= n; ++i) {
+        res *= i;
+    }
+    return res;
+}
+
+int main() {
+    int num = 5;
+    std::cout << "El factorial de " << num << " es: " << factorial(num) << std::endl;
+    return 0;
+}
+
+#ejercicio10
+
+
+#include <iostream>
+
+int main() {
+    int opcion;
+    std::cout << "1. Sumar\n2. Restar\n3. Multiplicar\nElige una opcion: ";
+    std::cin >> opcion;
+
+    switch (opcion) {
+        case 1:
+            std::cout << "Has elegido Sumar." << std::endl;
+            break;
+        case 2:
+            std::cout << "Has elegido Restar." << std::endl;
+            break;
+        case 3:
+            std::cout << "Has elegido Multiplicar." << std::endl;
+            break;
+        default:
+            std::cout << "Opcion invalida." << std::endl;
+            break;
+    }
+    return 0;
+}
+
+#ejercicio11
+
+
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+std::string invertirCadena(std::string str) {
+    std::reverse(str.begin(), str.end());
+    return str;
+}
+
+int main() {
+    std::string texto = "Hola";
+    std::string invertida = invertirCadena(texto);
+    std::cout << "Original: " << texto << std::endl;
+    std::cout << "Invertida: " << invertida << std::endl;
+    return 0;
+}
+
+#ejercicio12
+
+#include <iostream>
+
+void intercambiar(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int num1 = 10;
+    int num2 = 50;
+
+    std::cout << "Antes: num1=" << num1 << ", num2=" << num2 << std::endl;
+    intercambiar(&num1, &num2);
+    std::cout << "Despues: num1=" << num1 << ", num2=" << num2 << std::endl;
+    return 0;
+}
+#ejercicio13
+#include <iostream>
+
+class Rectangulo {
+private:
+    double ancho;
+    double alto;
+public:
+    Rectangulo(double a, double h) {
+        ancho = a;
+        alto = h;
+    }
+    double calcularArea() {
+        return ancho * alto;
+    }
+    double calcularPerimetro() {
+        return 2 * (ancho + alto);
+    }
+};
+
+int main() {
+    Rectangulo rect(4.0, 5.0);
+    std::cout << "Area: " << rect.calcularArea() << std::endl;
+    std::cout << "Perimetro: " << rect.calcularPerimetro() << std::endl;
+    return 0;
+}
+
+
+
+#ejercicio14
+
+#include <iostream>
+#include <string>
+
+class Estudiante {
+private:
+    std::string nombre;
+    int notas[3];
+public:
+    Estudiante(std::string n, int n1, int n2, int n3) {
+        nombre = n;
+        notas[0] = n1;
+        notas[1] = n2;
+        notas[2] = n3;
+    }
+    double calcularPromedio() {
+        return (notas[0] + notas[1] + notas[2]) / 3.0;
+    }
+};
+
+int main() {
+    Estudiante est("Maria", 9, 7, 8);
+    std::cout << "Promedio de Maria: " << est.calcularPromedio() << std::endl;
+    return 0;
+}
+
+#ejercicio15
+
+#include <iostream>
+#include <vector>
+#include <string>
+
+class Estudiante {
+private:
+    std::string nombre;
+    double promedio;
+public:
+    Estudiante(std::string n, double p) : nombre(n), promedio(p) {}
+    void mostrarInfo() {
+        std::cout << "Nombre: " << nombre << ", Promedio: " << promedio << std::endl;
+    }
+};
+
+int main() {
+    std::vector<Estudiante> clase;
+
+    clase.push_back(Estudiante("Luis", 8.5));
+    clase.push_back(Estudiante("Elena", 9.2));
+    clase.push_back(Estudiante("Pablo", 7.8));
+
+    for (const auto& estudiante : clase) {
+        estudiante.mostrarInfo();
+    }
+    return 0;
+}
