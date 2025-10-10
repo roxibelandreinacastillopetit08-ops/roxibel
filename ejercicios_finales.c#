@@ -1,0 +1,107 @@
+#C#
+
+
+#ejercicio1
+
+Console.WriteLine("Hola, Mundo");
+
+#ejercicio2
+
+Console.Write("Introduce tu nombre: ");
+string nombre = Console.ReadLine();
+Console.WriteLine($"Hola, {nombre}");
+
+#ejercicio3
+
+Console.Write("Introduce el primer número: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Introduce el segundo número: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+int suma = num1 + num2;
+Console.WriteLine($"La suma es: {suma}");
+
+#ejercicio4
+
+string[] nombres = { "Ana", "Luis", "Marta" };
+foreach (string n in nombres)
+{
+    Console.WriteLine(n);
+}
+
+#ejercicio5
+
+Console.Write("Introduce tu edad: ");
+int edad = Convert.ToInt32(Console.ReadLine());
+if (edad >= 18)
+{
+    Console.WriteLine("Es mayor de edad.");
+}
+else
+{
+    Console.WriteLine("Es menor de edad.");
+}
+
+#ejercicio6
+
+
+for (int i = 1; i <= 20; i++)
+{
+    if (i % 2 == 0)
+    {
+        Console.WriteLine(i);
+    }
+}
+
+#ejercicio7
+
+public static int Multiplicar(int a, int b)
+{
+    return a * b;
+}
+
+#ejercicio8
+
+List<string> tareas = new List<string>();
+tareas.Add("Comprar pan");
+tareas.Add("Estudiar C#");
+tareas.Remove("Comprar pan");
+
+foreach (string tarea in tareas)
+{
+    Console.WriteLine(tarea);
+}
+
+#ejercicio9
+
+public class Coche
+{
+    public string Marca { get; set; }
+    public string Modelo { get; set; }
+    public int Anio { get; set; }
+
+    public Coche(string marca, string modelo, int anio)
+    {
+        Marca = marca;
+        Modelo = modelo;
+        Anio = anio;
+    }
+
+    public void MostrarDetalles()
+    {
+        Console.WriteLine($"Marca: {Marca}, Modelo: {Modelo}, Año: {Anio}");
+    }
+}
+
+#ejercicio10
+
+List<Coche> garaje = new List<Coche>();
+
+// Instanciación
+garaje.Add(new Coche("Toyota", "Corolla", 2020));
+garaje.Add(new Coche("Ford", "Focus", 2018));
+
+// Recorrido y uso
+foreach (Coche coche in garaje)
+{
+    coche.MostrarDetalles();
+}
