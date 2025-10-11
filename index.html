@@ -1,104 +1,120 @@
-<table border="1">
-    <thead>
-        <tr>
-            <th>nombre</th>
-            <th>apellido</th>
-            <th>cedula</th>
-        <tr>
-    <thead>
-    <tbody>
-        <tr>
-            <th>Pablo</th>
-            <th>Hernandez</th>
-            <th>15748279</th>
-        <tr>
-        <tr>
-            <th>Amanda</th>
-            <th>Loaiza</th>
-            <th>18946425</th>
-        <tr>    
-        <tr>
-            <th>Eduin</th>
-            <th>Portillo</th>
-            <th>19450416</th>  
-        <tr>
-        <tr>
-            <th>Kevin</th>
-            <th>Rincon</th>
-            <th>29876819</th>  
-        <tr>
-        <tr>
-            <th>Oswaldo</th>
-            <th>Tovar</th>
-            <th>29930382</th>  
-        <tr>
-        <tr>
-            <th>Angel</th>
-            <th>Neri</th>
-            <th>31825571</th>  
-        <tr>
-             <th>Patricia</th>
-             <th>Portillo</th>
-             <th>32219910</th>  
-        <tr>
-            <th>Jhosue</th>
-            <th>Delgado</th>
-            <th>32280012</th>  
-        <tr>
-            <th>Angel</th>
-             <th>Gomez</th>
-             <th>32422842</th>  
-        <tr>
-            <th>Maria</th>
-            <th>Lopez</th>
-            <th>32698334</th>
-        <tr>
-            <th>Daniela</th>
-            <th>Bravo</th>
-            <th>32700110</th>  
-        <tr>
-            <th>jose</th>
-            <th>Molina</th>
-            <th>327008787</th>  
-         <tr>
-            <th>Roxibel</th>
-            <th>Castillo</th>
-            <th>32756560</th>  
-         <tr>
-            <th>Luis</th>
-            <th>Aguilar</th>
-            <th>33272644</th>
-        <tr>
-            <th>Ana</th>
-            <th>Rubio</th>
-            <th>33435489</th>  
-        <tr>
-            <th>Santiago</th>
-            <th>Villalobos</th>
-            <th>33596122</th> 
-            
-            
+<!-- ejercicio1 -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hola</title>
+</head>
+<body>
+    <h1>¡Hola, Mundo!</h1>
+    <p>Mi primera página web.</p>
+</body>
+</html>
 
-<h3>formulario</h3>
-<form action="procesar.formulario" method="post">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required><br><br>
-    
-    <label for="apellido">Apellido:</label>
-    <input type="text" id="apellido" name="apellido" required><br><br>
-    
-    <label for="cedula">Cédula:</label>
-    <input type="text" id="cedula" name="cedula" required><br><br>
+<!-- ejercicio2 -->
 
-    <label for="mensaje">Mensaje:</label><br>
-    <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br><br>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi Artículo</title>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1>Título del Artículo</h1>
+      </header>
 
-    <label for="pais">País:</label>
-    <select id="pais" name="pais">   
-           
-        <option value="mx">Venezuela</option>
-        <option value="es">francia</option>
-        <option value="ar">Colombia</option>  
-    
-    <input type="submit" value="Enviar">
-                        
+      <p>Este es el contenido principal del artículo.</p>
+
+      <footer>
+        <p>Autor: Ana López</p>
+      </footer>
+    </article>
+  </body>
+</html>
+
+<!-- ejercicio3 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Menú Principal</title>
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Acerca de</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
+
+ <!-- ejercicio4 -->
+
+
+ <!DOCTYPE html>
+ <html lang="es">
+   <head>
+     <meta charset="UTF-8">
+     <title>Menú Principal</title>
+     <link rel="stylesheet" href="estilos.css">
+   </head>
+   <body>
+     <nav>
+       <ul class="nav-menu">
+         <li><a href="#">Inicio</a></li>
+         <li><a href="#">Servicios</a></li>
+         <li><a href="#">Portafolio</a></li>
+         <li><a href="#">Contacto</a></li>
+       </ul>
+     </nav>
+   </body>
+ </html>
+ 
+
+ <!-- ejercicio6 -->
+ <!DOCTYPE html>
+ <html>
+   <head>
+     <meta charset="UTF-8">
+     <title>Formulario de Contacto</title>
+   </head>
+   <body>
+     <h1>Contáctanos</h1>
+     <form method="POST" action="procesar.php">
+       <label for="nombre">Nombre:</label><br>
+       <input type="text" id="nombre" name="nombre" required><br><br>
+ 
+       <label for="email">Email:</label><br>
+       <input type="email" id="email" name="email" required><br><br>
+ 
+       <label for="mensaje">Mensaje:</label><br>
+       <textarea id="mensaje" name="mensaje" rows="5" cols="30" required></textarea><br><br>
+ 
+       <button type="submit">Enviar</button>
+     </form>
+   </body>
+ </html>
+ 
+
+  <!-- ejercicio7-->
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Formulario Básico</title>
+      <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+      <form method="POST" action="procesar.php">
+        <input type="text" name="nombre" placeholder="Nombre"><br><br>
+        <input type="email" name="email" placeholder="Email"><br><br>
+        <textarea name="mensaje" placeholder="Escribe tu mensaje"></textarea><br><br>
+        <button type="submit">Enviar</button>
+      </form>
+    </body>
+  </html>
+  
